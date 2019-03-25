@@ -1,0 +1,141 @@
+﻿6. 
+GET legislative_index/_search
+{
+  "query": {
+    "simple_query_string": {
+      "fields": [ "custom_body" ],
+      "query": "ustawa"
+    }
+  }
+}
+total : 1179
+
+
+7. 
+
+GET legislative_index/_search
+{
+  "query": {
+    "simple_query_string": {
+      "fields": [ "custom_body" ],
+      "query": "\"kpc\""
+    }
+  }
+}
+total : 100
+
+8.
+GET /legislative_index/_search
+{
+    "query": {
+        "match_phrase": {
+            "custom_body": {
+                "query": "wchodzi w życie",
+                "slop":  2
+            }
+        }
+    }
+}
+
+total : 1175
+
+9.
+
+GET legislative_index/_search
+{
+  "_source": {
+        "excludes": [ "custom_body" ]
+    },
+  "query": {
+    "simple_query_string": {
+      "fields": [ "custom_body" ],
+      "query": "konstytucja"
+    }
+  }
+}
+
+
+max score : 7.3702393,
+
+
+score : 7.3702393,
+year : 2000,
+position : 443,
+id : 2000443,
+title : o umowach międzynarodowych
+
+score : 7.101562,
+year : 1997,
+position : 604,
+id : 1997604,
+title : o partiach politycznych
+
+score : 7.1005,
+year : 2001,
+position : 1372,
+id : 1996350,
+title : o zmianie ustawy o Trybunale Stanu
+
+score : 6.9166493,
+year : 1998,
+position : 966,
+id : 1997642,
+title : o zmianie ustawy o Najwyższej Izbie Kontroli
+
+score : 6.5681186,
+year : 1994,
+position : 251,
+id : 1997629,
+title : o zmianie ustawy konstytucyjnej o trybie przygotowania\ni uchwalenia Konstytucji Rzeczypospolitej Polskiej
+
+score : 6.251012,
+year : 1999,
+position : 688,
+id : 1999688,
+title : o wykonywaniu inicjatywy ustawodawczej przez obywateli
+
+score : 5.6299095,
+year : 1995,
+position : 487,
+id : 1996199,
+title : o referendum
+
+score : 5.3602414,
+year : 2000,
+position : 69,
+id : 1997681,
+title : o Rzeczniku Praw Dziecka
+
+score : 5.3130717,
+year : 2000,
+position : 718,
+id : 200123,
+title : o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych
+
+score : 5.0928354,
+year : 2001,
+position : 247,
+id : 2001247,
+title : o zmianie ustawy o ochronie informacji niejawnych
+
+
+10.
+
+GET legislative_index/_search
+{
+  "_source": {
+        "excludes": [ "custom_body" ]
+    },
+  "query": {
+    "simple_query_string": {
+      "fields": [ "custom_body" ],
+      "query": "konstytucja"
+    }
+  },
+  "highlight" : {
+        "fields" : {
+            "custom_body" : {}
+        },
+        "number_of_fragments": 3
+    }
+}
