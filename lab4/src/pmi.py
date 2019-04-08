@@ -16,4 +16,5 @@ if __name__ == '__main__':
             bigram_pmi[bigram] = pmi
 
     for key, value in sorted(bigram_pmi.items(), key=lambda e: e[1], reverse=True)[:300]:
-        print(key, value, bigrams[key], unigrams[key.split()[0]], unigrams[key.split()[1]])
+        print("{0:<30} {1:<20} {2:<10} {3:<10} {4:<10}".format(key, value, bigrams[key], unigrams[key.split()[0]], unigrams[key.split()[1]]))
+

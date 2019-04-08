@@ -35,4 +35,4 @@ if __name__ == "__main__":
         bigram_llr[bigram] = llr_value
 
     for key, value in sorted(bigram_llr.items(), key=lambda e: e[1], reverse=True)[:300]:
-        print(key, value, bigrams[key], unigrams[key.split()[0]], unigrams[key.split()[1]])
+        print("{0:<30} {1:<20} {2:<10} {3:<10} {4:<10}".format(key, value, bigrams[key], unigrams[key.split()[0]], unigrams[key.split()[1]]))
