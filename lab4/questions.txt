@@ -1,0 +1,9 @@
+Which measure works better for the problem?
+Log likelihood ratio, becaouse:
+	- pmi doesn't consider the fact that some words are very infrequent
+	- pmi assumes normal distribution of words
+What would be needed, besides good measure, to build a dictionary of multiword expressions?
+	- big set of data
+	- taking context under consideration
+	- high quality data (depends on target usage)
+Can you identify a certain threshold which clearly divides the good expressions from the bad?
