@@ -1,0 +1,8 @@
+ten
+changed    tp: 73 - fp: 27 - fn: 64 - tn: 75 - precision: 0.7300 - recall: 0.5328 - accuracy: 0.4451 - f1-score: 0.6160
+
+one
+changed    tp: 136 - fp: 101 - fn: 1 - tn: 0 - precision: 0.5738 - recall: 0.9927 - accuracy: 0.5714 - f1-score: 0.7272
+
+max_50
+tp: 312 - fp: 237 - fn: 2 - tn: 1 - precision: 0.5683 - recall: 0.9936 - accuracy: 0.5662 - f1-score: 0.7230
